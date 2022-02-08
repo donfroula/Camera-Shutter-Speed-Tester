@@ -27,4 +27,4 @@ Error conditions (pulse too short, pulse too long (Timer 1 overflow)})are displa
 Measurements are limited to once every 1.25 seconds to limit bounce and spurious readings.
 
 Accuracy with crystal-controlled Arduinos or Atmega 328p is excellent. Arduinos using resonators may be less accurate
-and/or temperature stable.
+and/or temperature stable. Accuracy of the circuit and code was checked with a calibrated square wave generator.
