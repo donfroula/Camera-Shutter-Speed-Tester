@@ -4,7 +4,7 @@ An Arduino-based shutter speed tester
 This program uses the Timer 1 oomparator input interrupt capture mode of an AT328p-based Arduino to measure shutter speed.
 A flicker-free continuous light is directed toward one side of the shutter.
 The photodiode is positioned on the other side of the shutter such that the photodiode is
-exposed to light only when the shitter is fully open. For leaf shutters, open the f/stop
+exposed to light only when the shutter is fully open. For leaf shutters, open the f/stop
 control fully and position the photodiode near the periphery of the shutter. This avoids inaccuracies
 in the readings at higher speeds due to the time needed to open and close the shutter, which is not part of the 
 calibrated leaf shutter speed. Focal plane shutters are not subject to this distortion.
