@@ -8,21 +8,26 @@ exposed to light only when the shitter is fully open. For leaf shutters, open th
 control fully and position the photodiode near the periphery of the shutter. This avoids inaccuracies
 in the readings at higher speeds due to the time needed to open and close the shutter, which is not part of the 
 calibrated leaf shutter speed. Focal plane shutters are not subject to this distortion.
-The photodiode and detector is quite sensitive. The test should be conducted in dim room light. Some
+The photodiode and detector are quite sensitive. The test should be conducted in dim room light. Some
 adjustment of light intensity through distance of the source to the shutter may be needed until reliable
 results are obtained.
 
 Best results are obtained using a photodiode as sensor rather than a phototransistor. Be sure to wire the photodiode
-with polarity as indicated in the schematic.
+with the cathode towards the +5 volt rail (reverse biased) as the photodiode is run in photoconductive mode where the reverse-bias current
+is linear to the light falling on the device. Note the schematic shows a phototransistor, rather than a photodiode. Testing 
+indicates that a photodiode works better under varying illumination than a phototransistor.
 
-Maximum testable shutter speed is limited to just over 1/2000 second. At this speed, inaccuracy is limited to 1% due to
+The voltage divider at pin D7 sets the comparator threshold voltage, 152 millivolts in this case, which is quite sensitive. No A to D conversion
+is necessary when using comparator mode, making sensing very fast and accurate.
+
+The fastest testable shutter speed is limited in software to just less than 1/2000 second. At this speed, inaccuracy is limited to 1% due to
 the 16 microsend tick of Timer 1. Accuracy is better as measured shutter speed increases.
 
-Maximum testable shutter speed is just over 1 second.
+The slowest testable shutter speed is just over 1 second.
 
-Speed of each test is displayed as a fraction as well as in microseconds for additional accuracy.
+The speed of each test is displayed as a conventional fraction as well as in microseconds for additional accuracy.
 
-Error conditions (pulse too short, pulse too long (Timer 1 overflow)})are displayed.
+Error conditions (pulse too short, pulse too long (Timer 1 overflow))are displayed.
 
 Measurements are limited to once every 1.25 seconds to limit bounce and spurious readings.
 
